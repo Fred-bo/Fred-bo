@@ -49,7 +49,7 @@
       </div>
     </div>
 
-    <!-- 第二栏导航条 -->
+    <!-- 第二栏导航 -->
     <!-- <div class="home-navigate">
       <ul>
         <li class="home-navigate-home">
