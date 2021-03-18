@@ -4,24 +4,14 @@
     <div class="msgname">
       <div class="msgk">
         <div class="content"><span>留言内容：</span> {{ data.word }}</div>
-        <div class="img">
-          <!-- <img
-            class="img1"
-            :src="`http://127.0.0.1:7001/public/img/${data.img}`"
-            alt=""
-          /> -->
+        <div class="img" v-if="data.img">
           <viewer>
             <img
-              width="200"
+              width="200px"
+              height="200px"
               :src="`http://127.0.0.1:7001/public/img/${data.img}`"
             />
           </viewer>
-          <!-- <el-image
-            style="width: 100px; height: 100px"
-            :src="`http://127.0.0.1:7001/public/img/${data.img}`"
-            :preview-src-list="srcList"
-          >
-          </el-image> -->
         </div>
         <div class="time">
           <span>留言时间：</span>
@@ -67,12 +57,12 @@ export default {
     };
   },
   async created() {
-    var re = await axios.post("http://127.0.0.1:7001/list");
+    var re = await this.$axios.post("http://127.0.0.1:7001/list");
     this.msgarr = re.data;
   },
 
   async updated() {
-    var msgre = await axios.get("http://127.0.0.1:7001/getmsg");
+    var msgre = await this.$axios.get("http://127.0.0.1:7001/getmsg");
     this.msgarr = msgre.data;
   },
   methods: {
@@ -125,7 +115,7 @@ export default {
 .msg {
   position: relative;
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
   margin: 20px 0;
   padding: 20px;
   border-radius: 5px;
@@ -170,7 +160,7 @@ button {
   outline: none;
   color: white;
   text-align: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;

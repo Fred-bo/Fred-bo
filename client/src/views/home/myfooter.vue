@@ -12,68 +12,80 @@
     </div>
     <div class="us">
       <div>
-        <img src="@/img/footer-car.png"  class="one"/>
+        <img src="@/img/footer-car.png" class="one" />
         <p>实物订单问题</p>
       </div>
 
       <div>
         <span @mouseenter="enter()" :style="onenone" @mouseleave="leave()">
-        <img src="@/img/footer-weibo.png"  class="two" />
+          <img src="@/img/footer-weibo.png" class="two" />
         </span>
         <span @mouseenter="enter()" :style="oneblock" @mouseleave="leave()">
-        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3101623223,11353193&fm=26&gp=0.jpg"  class="two" />
+          <img
+            src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3101623223,11353193&fm=26&gp=0.jpg"
+            class="two"
+          />
         </span>
         <p>云城官方微博</p>
       </div>
 
       <div>
         <span @mouseenter="tenter()" :style="twonone" @mouseleave="tleave()">
-        <img src="@/img/footer-wechat.png"  class="three" />
+          <img src="@/img/footer-wechat.png" class="three" />
         </span>
         <span @mouseenter="tenter()" :style="twoblock" @mouseleave="tleave()">
-        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3101623223,11353193&fm=26&gp=0.jpg"  class="two" />
+          <img
+            src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3101623223,11353193&fm=26&gp=0.jpg"
+            class="two"
+          />
         </span>
         <p>云城官方微信</p>
       </div>
 
       <div>
         <span @mouseenter="trenter()" :style="trnone" @mouseleave="trleave()">
-        <img src="@/img/footer-liuyan.png"  class="four" />
+          <img src="@/img/footer-liuyan.png" class="four" />
         </span>
         <span @mouseenter="trenter()" :style="trblock" @mouseleave="trleave()">
-        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3101623223,11353193&fm=26&gp=0.jpg"  class="two" />
+          <img
+            src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3101623223,11353193&fm=26&gp=0.jpg"
+            class="two"
+          />
         </span>
         <p>云城留言板</p>
       </div>
 
       <div>
         <span @mouseenter="fenter()" :style="fnone" @mouseleave="fleave()">
-        <img src="@/img/footer-kefu.png"  class="five" />
+          <img src="@/img/footer-kefu.png" class="five" />
         </span>
         <span @mouseenter="fenter()" :style="fblock" @mouseleave="fleave()">
-        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3101623223,11353193&fm=26&gp=0.jpg"  class="two" />
+          <img
+            src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3101623223,11353193&fm=26&gp=0.jpg"
+            class="two"
+          />
         </span>
         <p>云城专属客服</p>
       </div>
     </div>
-	<div class="bottom">
-    <!-- <div class="logo">
+    <div class="bottom">
+      <!-- <div class="logo">
         <img src="@/img/cloudCity.png" alt="">
     </div> -->
-    <div class="baoyou">
-        <img src="@/img/footer-baoyou.png" alt="">
+      <div class="baoyou">
+        <img src="@/img/footer-baoyou.png" alt="" />
         <p>满49送货到家</p>
-    </div>
-    <div class="pinzhi">
-        <img src="@/img/footer-pinzhi.png" alt="">
+      </div>
+      <div class="pinzhi">
+        <img src="@/img/footer-pinzhi.png" alt="" />
         <p>品质保证</p>
+      </div>
     </div>
-	</div>
 
-  <div class="last">
+    <div class="last">
       <p class="first">
         <span>增值电信业务经营许可证 川B2-20130104</span>
-        <span>蜀ICP备14009198号-2</span>  
+        <span>蜀ICP备14009198号-2</span>
         <span>网络文化经营许可证 川网文[2018]9435-346号</span>
         <span>互联网出版许可证 新出网证 <川>字027号</span>
       </p>
@@ -85,14 +97,12 @@
         <span>未成年人家长监护系统</span>
       </p>
       <p class="logo">
-        <img src="@/img/cloudCity.png" alt="">
+        <img src="@/img/cloudCity.png" alt="" />
         <span>
-           云城便利店 版权所有
+          云城便利店 版权所有
         </span>
-
       </p>
-  </div>
-
+    </div>
   </div>
 </template>
 
@@ -100,70 +110,68 @@
 export default {
   data() {
     return {
-        onenone:{
-          display:'block'
-        },
-        oneblock:{
-          display:'none'
-        },
-        twonone:{
-          display:'block'
-        },
-        twoblock:{
-          display:'none'
-        },
-        trnone:{
-          display:'block'
-        },
-        trblock:{
-          display:'none'
-        },
-        fnone:{
-          display:'block'
-        },
-        fblock:{
-          display:'none'
-        }
-
+      onenone: {
+        display: "block",
+      },
+      oneblock: {
+        display: "none",
+      },
+      twonone: {
+        display: "block",
+      },
+      twoblock: {
+        display: "none",
+      },
+      trnone: {
+        display: "block",
+      },
+      trblock: {
+        display: "none",
+      },
+      fnone: {
+        display: "block",
+      },
+      fblock: {
+        display: "none",
+      },
     };
   },
 
-  methods:{
+  methods: {
     enter() {
-      this.onenone={display:'none'};
-      this.oneblock={display:'block'};
+      this.onenone = { display: "none" };
+      this.oneblock = { display: "block" };
     },
     leave() {
-      this.onenone={display:'block'};
-      this.oneblock={display:'none'};
+      this.onenone = { display: "block" };
+      this.oneblock = { display: "none" };
     },
     tenter() {
-      this.twonone={display:'none'};
-      this.twoblock={display:'block'};
+      this.twonone = { display: "none" };
+      this.twoblock = { display: "block" };
     },
     tleave() {
-      this.twonone={display:'block'};
-      this.twoblock={display:'none'};
+      this.twonone = { display: "block" };
+      this.twoblock = { display: "none" };
     },
     trenter() {
-      this.trnone={display:'none'};
-      this.trblock={display:'block'};
+      this.trnone = { display: "none" };
+      this.trblock = { display: "block" };
     },
     trleave() {
-      this.trnone={display:'block'};
-      this.trblock={display:'none'};
+      this.trnone = { display: "block" };
+      this.trblock = { display: "none" };
     },
     fenter() {
-      this.fnone={display:'none'};
-      this.fblock={display:'block'};
+      this.fnone = { display: "none" };
+      this.fblock = { display: "block" };
     },
     fleave() {
-      this.fnone={display:'block'};
-      this.fblock={display:'none'};
+      this.fnone = { display: "block" };
+      this.fblock = { display: "none" };
     },
-
-  }
-}
+  },
+};
 </script>
 
 <style>
@@ -184,7 +192,7 @@ export default {
 }
 
 .footer-box .top span {
-  margin-left: 225px;
+  margin-left: 17%;
 }
 
 .footer-box .top a {
@@ -199,7 +207,7 @@ export default {
   width: 1200px;
   display: flex;
   flex-wrap: nowrap;
-  margin-left: 150px;
+  margin-left: 16%;
   font-size: 12px;
   margin-top: 20px;
 }
@@ -213,8 +221,8 @@ export default {
   border-radius: 10px;
 }
 
-.footer-box .us div:last-of-type{
-	margin-right: 0;
+.footer-box .us div:last-of-type {
+  margin-right: 0;
 }
 
 .footer-box .us .one {
@@ -247,19 +255,19 @@ export default {
 }
 
 /* 包邮、品质 */
-.footer-box  .bottom {
-	margin-top: 30px;
-	width: 100%;
-	height: 90px;
-	/* background-color: #1a7b96; */
-	background-color: #444444;
+.footer-box .bottom {
+  margin-top: 30px;
+  width: 100%;
+  height: 90px;
+  /* background-color: #1a7b96; */
+  background-color: #444444;
   font-size: 12px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
 }
 
-.footer-box  .bottom .baoyou {
+.footer-box .bottom .baoyou {
   width: 100px;
   height: 100px;
   text-align: center;
@@ -268,12 +276,12 @@ export default {
   margin-top: 12px;
 }
 
-.footer-box  .bottom .baoyou img {
+.footer-box .bottom .baoyou img {
   width: 50px;
   height: 50px;
 }
 
-.footer-box  .bottom .pinzhi {
+.footer-box .bottom .pinzhi {
   width: 100px;
   height: 100px;
   text-align: center;
@@ -281,7 +289,7 @@ export default {
   color: #cdcdcd;
 }
 
-.footer-box  .bottom .pinzhi img {
+.footer-box .bottom .pinzhi img {
   width: 50px;
   height: 50px;
 }
@@ -305,7 +313,7 @@ export default {
   margin-right: 10px;
 }
 
-.last .logo{
+.last .logo {
   height: 50px;
 }
 
@@ -318,9 +326,8 @@ export default {
 
 .last .logo span {
   display: inline-block;
-   height: 50px;
+  height: 50px;
   line-height: 50px;
   position: absolute;
 }
-
 </style>

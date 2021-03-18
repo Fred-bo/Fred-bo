@@ -1,4 +1,4 @@
-<template >
+<template>
   <div class="goodsL">
     <el-table :data="goodsList">
       <el-table-column prop="id" label="商品ID" width="80" align="center">
@@ -195,5 +195,11 @@ export default {
 .el-table {
   width: 90%;
   margin: 0 auto;
+}
+.el-dialog__body {
+  padding: 0 20px;
+  color: #606266;
+  font-size: 14px;
+  word-break: break-all;
 }
 </style>

@@ -1,39 +1,36 @@
 <template>
-	<div class="home" @wheel="catchscoll">
-		<div :class="top?'topshow':''" class="scollTop">
-			<topnav></topnav>	
-		</div>
-		<!-- 搜索栏 -->
-		<!-- <div class="search">
+  <div class="home" @wheel="catchscoll">
+    <div :class="top ? 'topshow' : ''" class="scollTop">
+      <topnav></topnav>
+    </div>
+    <!-- 搜索栏 -->
+    <!-- <div class="search">
 			<input type="text" placeholder="热销商品" >
 			<span>
 				<img src="../img/search.png" alt="">
 			</span>
 		</div> -->
 
-		<!-- 轮播图 -->
-		<div class="lunbo">
+    <!-- 轮播图 -->
+    <div class="lunbo">
+      <el-carousel :interval="2000" type="card" height="200px">
+        <el-carousel-item v-for="(el, index) in lunbourl" :key="index">
+          <img :src="el.imgurl" class="medium" />
+        </el-carousel-item>
+      </el-carousel>
+    </div>
 
-			<el-carousel :interval="2000" type="card" height="200px">
-				<el-carousel-item v-for="el in lunbourl">
-					<img :src="el.imgurl" class="medium"></img>
-				</el-carousel-item>
-			</el-carousel>
+    <!-- 首页部分热销商品展示 -->
+    <div class="showpage">
+      <div class="hotgoods">
+        热销商品
+      </div>
+      <hotlist :data1="datas"></hotlist>
+    </div>
 
-		</div>
-
-		<!-- 首页部分热销商品展示 -->
-		<div class="showpage">
-			<div class="hotgoods">
-				热销商品
-			</div>
-			<hotlist :data1="datas"></hotlist>
-		</div>
-	
-		
-		<!-- footer -->
-		<myfooter></myfooter>
-	</div>
+    <!-- footer -->
+    <myfooter></myfooter>
+  </div>
 </template>
 
 <script>

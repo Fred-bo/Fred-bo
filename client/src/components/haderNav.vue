@@ -2,13 +2,21 @@
   <div class="home minw">
     <!-- 头部导航条 -->
     <div class="nav-top">
-      <div class="left-tittle" style="margin-left: 50px">
+      <router-link to="/Home" class="left-tittle" style="margin-left: 50px">
         <img src="../img/cloudCity.png" class="logo" />
         <img src="../img/slogan.jpg" class="slogan" />
-      </div>
+      </router-link>
       <div class="right-tittle" style="margin-right: 0px">
         <div v-if="userInfo.length > 0" class="header-block">
-          <img class="header-img" :src="userInfo[0].headpic" alt="" />
+          <router-link to="/personal">
+            <img
+              v-if="userInfo[0].headpic"
+              class="header-img"
+              :src="userInfo[0].headpic ? userInfo[0].headpic : deImg"
+              alt=""
+            />
+            <img v-else class="header-img" :src="deImg" alt="" />
+          </router-link>
         </div>
         <div v-else>
           <router-link to="/register">注册</router-link>
@@ -30,8 +38,13 @@
           <router-link to="/liuyan">客服</router-link>
         </div>
         <div class="home-navigate-mycar">
-          <img style="width: 25px; height: 25px" src="../img/car.png" alt="" />
-          <router-link to="/car" class="cartext">我的购物车</router-link>
+          <router-link to="/car" class="cartext">
+            <img
+              style="width: 25px; height: 25px"
+              src="../img/car.png"
+              alt=""
+            />
+          </router-link>
         </div>
       </div>
     </div>
@@ -65,6 +78,7 @@ export default {
       headerImg: "",
       indexNav: 1,
       userInfo: "",
+      deImg: require("../../assets/deIMG.jpg"),
     };
   },
   mounted() {
@@ -83,12 +97,14 @@ export default {
 };
 </script>
 
-<style  scoped>
+<style scoped>
 /* 顶部导航栏样式 */
 .minw {
   width: 100%;
 }
-
+img {
+  display: block;
+}
 .nav-top {
   display: flex;
   flex-wrap: nowrap;
@@ -129,6 +145,7 @@ export default {
   color: #000000;
   text-decoration: none;
   font-size: 14px;
+  /* margin-top: 24px; */
 }
 .header-img {
   width: 40px;

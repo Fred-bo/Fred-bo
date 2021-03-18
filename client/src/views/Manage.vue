@@ -167,7 +167,6 @@
   </div>
 </template>
 
-
 <script>
 import Order from "../components/manage/order";
 import GoodsL from "../components/manage/goodsL";
@@ -244,7 +243,7 @@ export default {
       this.goodsB2 = false;
       this.userB2 = false;
       let res = this.$axios.get("http://127.0.0.1:7001/goods").then((res) => {
-        this.goodsAllArr = res.data.filter((item) => item.type == "01");
+        this.goodsAllArr = res.data.filter((item) => item.type == "1");
       });
     },
     goodsL() {

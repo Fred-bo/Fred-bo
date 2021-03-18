@@ -29,7 +29,13 @@
               class="num"
               value="item.num"
             />
-            <button v-on:click="item.num += 1" class="right">+</button>
+            <!-- item.num += 1 -->
+            <button
+              v-on:click="item.num < item.kucun ? (item.num += 1) : item.kucun"
+              class="right"
+            >
+              +
+            </button>
           </div>
           <div class="total1">{{ item.price * item.num }}元</div>
           <div class="opera" v-cloak @click="deleteRow(id, item.goodsid)">
