@@ -83,7 +83,7 @@ class HomeController extends Controller {
 		if (this.ctx.request.files[0]) { //判断有没有文件 没有直接发送
 			var filename1 = path.basename(this.ctx.request.files[0].filepath)
 			var oldpath = `${this.ctx.request.files[0].filepath}`
-			var newpath = `${path.dirname(__dirname)}/public/img/${filename1}`
+			var newpath = `${path.dirname(__dirname)}/public/himg/${filename1}`
 			// fs.renameSync(oldpath,newpath) 这个方法只能在根转移比如c盘 转c盘另外的文件夹
 
 			fs.copyFile(`${oldpath}`, `${newpath}`, (err) => {

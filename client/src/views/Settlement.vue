@@ -224,7 +224,7 @@ export default {
 };
 </script>
 
-<style  scoped>
+<style scoped>
 #Settlement {
   width: 80%;
   margin: 0 auto;

@@ -127,7 +127,7 @@ export default {
     count1() {
       let _this = this;
       let end = new Date("2020-10-25 00:00:00");
-      setInterval(function () {
+      setInterval(function() {
         let start = new Date();
         let time = end - start; //时间差，是一个毫秒值
         // _this.hours = Math.floor(time / 1000 / 60 / 60 % 24);

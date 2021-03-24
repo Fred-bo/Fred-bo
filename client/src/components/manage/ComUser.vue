@@ -1,4 +1,4 @@
-<template >
+<template>
   <div class="user">
     <el-table :data="userList">
       <el-table-column prop="uid" label="序号" width="80" align="center">

@@ -66,7 +66,7 @@ export default {
   },
   computed: {
     //计算总价
-    price: function () {
+    price: function() {
       let sum = 0;
       for (let value of this.tableData) {
         var newprice = Number(value.price);

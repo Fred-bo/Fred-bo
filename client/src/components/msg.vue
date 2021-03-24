@@ -9,7 +9,7 @@
             <img
               width="200px"
               height="200px"
-              :src="`http://127.0.0.1:7001/public/img/${data.img}`"
+              :src="`http://127.0.0.1:7001/public/himg/${data.img}`"
             />
           </viewer>
         </div>

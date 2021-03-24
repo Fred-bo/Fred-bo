@@ -1,4 +1,4 @@
-<template >
+<template>
   <div>
     <!-- 购物车 -->
     <el-table :data="goodsAllArr">
@@ -43,7 +43,7 @@ export default {
   },
 };
 </script>
-<style >
+<style>
 .el-table {
   width: 90%;
   margin: 0 auto;

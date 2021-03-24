@@ -1,4 +1,4 @@
-<template >
+<template>
   <div class="order">
     <!-- 订单 -->
     <div class="goods-table">

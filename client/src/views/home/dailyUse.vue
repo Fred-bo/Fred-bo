@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       arr: [],
-      hotimg: "http://127.0.0.1:7001/public/img/hot1.png",
+      hotimg: "http://127.0.0.1:7001/public/himg/hot1.png",
     };
   },
   components: {
