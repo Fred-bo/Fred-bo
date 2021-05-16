@@ -1,4 +1,5 @@
 <template>
+  <!-- 首页商品展示大盒子组件 -->
   <div class="hot-box">
     <div
       class="hotlist"
