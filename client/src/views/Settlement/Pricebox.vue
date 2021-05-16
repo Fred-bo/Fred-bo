@@ -1,4 +1,5 @@
 <template>
+  <!-- 订单提交按钮组件 -->
   <div class="pricebox">
     <div>
       <span>总商品金额：</span>

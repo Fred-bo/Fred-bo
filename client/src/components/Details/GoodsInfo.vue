@@ -1,4 +1,5 @@
 <template>
+  <!-- 商品详情页右边俩按钮的盒子组件 -->
   <div class="goodsinfo">
     <ul class="goodsbox">
       <li class="title" v-html="goodsinfo.name"></li>
@@ -139,7 +140,7 @@ export default {
 }
 
 .price .newprice {
-  margin-left: 34px;
+  margin-left: 33px;
   font-size: 18px;
   color: #616776;
 }

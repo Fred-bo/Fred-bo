@@ -1,4 +1,5 @@
 <template>
+  <!-- 订单收货地址等信息组件 -->
   <div>
     <div class="listtit">
       <div id="goods">订单信息</div>

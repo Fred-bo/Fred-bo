@@ -20,7 +20,7 @@ import BackButtom from "../components/backButtom";
 export default {
   name: "Details",
   components: {
-    Rotation: () => import("@/views/Details/Rotation.vue"),
+    Rotation: () => import("../components/Details/Rotation.vue"),
     topnav,
     BackButtom,
     // myfooter,

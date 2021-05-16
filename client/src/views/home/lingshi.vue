@@ -1,4 +1,5 @@
 <template>
+<!-- 首页单个商品展示的组件 -->
 	<div>
 		<topnav></topnav>
 	<div class="box">
@@ -8,7 +9,7 @@
 				<span>零食小天地</span>
 			</div>
 
-			<div class="list" v-for="el in arr" v-if="el.type=='01'" :key="el.id" @click="choose(el.id)">
+			<div class="list" v-for="el in arr" :key="el.id"  v-if="el.type=='01'" @click="choose(el.id)">
 
 				<img :src="el.img" class="lingshi-img" />
 				<p v-html="el.desc" class="lingshi-desc"></p>

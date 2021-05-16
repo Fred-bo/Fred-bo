@@ -1,4 +1,5 @@
 <template>
+  <!-- 详情页中间展示的组件 -->
   <div class="magnify">
     <Picshow :goodsinfo="goodsinfo"></Picshow>
     <GoodsInfo :goodsinfo="goodsinfo"></GoodsInfo>

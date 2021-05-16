@@ -1,9 +1,9 @@
 const Service = require('egg').Service;
 const svgCaptcha = require('svg-captcha');
 class UserService extends Service {
-  async userinfo(){
-    var sql=`select * from user where username="${this.ctx.session.email}"`
-    var re=await this.app.mysql.query(sql)
+  async userinfo() {
+    var sql = `select * from user where username="${this.ctx.session.email}"`
+    var re = await this.app.mysql.query(sql)
     return re
   }
   async verif() {
@@ -24,11 +24,11 @@ class UserService extends Service {
 
   async login(loginUserInfo) {
     // console.log(loginUserInfo)
-    var sql=`select * from user where email="${loginUserInfo.email}" and pwd="${loginUserInfo.pwd}"`
-        var result=await this.app.mysql.query(sql) 
-        // console.log(result)
-        
-        return result
+    var sql = `select * from user where email="${loginUserInfo.email}" and pwd="${loginUserInfo.pwd}"`
+    var result = await this.app.mysql.query(sql)
+    // console.log(result)
+
+    return result
   }
   // async login(loginUserInfo) {
   //   console.log(loginUserInfo,1111)
@@ -61,27 +61,38 @@ class UserService extends Service {
     //1.先取出verif跟上一次的比较==>
     //2.去数据库中查找email  如果有==>
     //3.存入数据库email  pwd img
-    console.log(userinfo.verif,this.ctx.session.verif)//注册按钮提交时 提交的数据
+    console.log(userinfo.verif, this.ctx.session.verif) //注册按钮提交时 提交的数据
     // console.log(this.ctx.session)//上一次的缓存验证码
-    if (userinfo.verif.toUpperCase()!= this.ctx.session.verif.toUpperCase()) {
+    if (userinfo.verif.toUpperCase() != this.ctx.session.verif.toUpperCase()) {
       console.log(1)
-      return { code: 4001, info: "验证码错误" }
-    
+      return {
+        code: 4001,
+        info: "验证码错误"
+      }
     } else {
       var sql = `select *from user where email="${userinfo.email}"`
       var results = await this.app.mysql.query(sql)
       // console.log(re)
       if (results[0]) {
-        return { code: 4002, info: "邮箱已经注册过" }
+        return {
+          code: 4002,
+          info: "邮箱已经注册过"
+        }
       } else {
         var sql = `insert into user (username,email,pwd) values ("${userinfo.username}","${userinfo.email}","${userinfo.pwd}")`
         var results1 = await this.app.mysql.query(sql)
-         if(results1)
-        console.log(results1.affectedRows)
+        if (results1)
+          console.log(results1.affectedRows)
         if (results1.affectedRows > 0) {
-          return { code: 2001, info: "注册成功" }
+          return {
+            code: 2001,
+            info: "注册成功"
+          }
         } else {
-          return { code: 5001, info: "注册失败,后端bug" }
+          return {
+            code: 5001,
+            info: "注册失败,后端bug"
+          }
         }
 
       }

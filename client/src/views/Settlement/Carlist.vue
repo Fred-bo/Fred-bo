@@ -1,4 +1,5 @@
 <template>
+  <!-- 购物车组件 -->
   <div>
     <div class="listtit">
       <div id="listimg" v-cloak>商品图片</div>

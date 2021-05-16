@@ -17,6 +17,10 @@
           <span>距离本场结束还有 </span>
 
           <ul class="time-container middle">
+            <li class="float-left time" v-if="hours == 0 ? false : true">
+              {{ hours }}
+            </li>
+            <li class="float-left point" v-if="hours == 0 ? false : true">:</li>
             <li class="float-left time">{{ mins }}</li>
             <li class="float-left point">:</li>
             <li class="float-left time">{{ seconds }}</li>
@@ -61,48 +65,48 @@ export default {
       arr: [
         {
           id: 1,
-          time: "15:00场",
-          state: "已开始",
+          time: "09:00场",
+          state: "已结束",
         },
         {
           id: 2,
-          time: "19:00场",
-          state: "已开始",
+          time: "10:00场",
+          state: "已结束",
         },
         {
           id: 3,
-          time: "22:00场",
-          state: "已开始",
+          time: "11:00场",
+          state: "已结束",
         },
         {
           id: 4,
-          time: "00:00场",
-          state: "已开始",
+          time: "12:00场",
+          state: "已结束",
         },
         {
           id: 5,
-          time: "10:00场",
-          state: "疯抢中",
+          time: "13:00场",
+          state: "已结束",
         },
         {
           id: 6,
-          time: "15:00场",
-          state: "已开始",
+          time: "16:00场",
+          state: "即将开始",
         },
         {
           id: 7,
           time: "19:00场",
-          state: "已开始",
+          state: "未开始",
         },
         {
           id: 8,
           time: "22:00场",
-          state: "已开始",
+          state: "未开始",
         },
         {
           id: 9,
           time: "00:00场",
-          state: "已开始",
+          state: "未开始",
         },
       ],
       arr2: [],
@@ -126,11 +130,12 @@ export default {
     },
     count1() {
       let _this = this;
-      let end = new Date("2020-10-25 00:00:00");
+      let end = new Date("2021-05-17 16:00:00");
       setInterval(function() {
         let start = new Date();
         let time = end - start; //时间差，是一个毫秒值
-        // _this.hours = Math.floor(time / 1000 / 60 / 60 % 24);
+        // _this.hours = Math.ceil((time / 1000 / 60 / 60) % 24);
+        _this.hours = Math.floor(time / 1000 / 60 / 60);
         _this.mins = Math.floor((time / 1000 / 60) % 60);
         _this.seconds = Math.floor((time / 1000) % 60);
         _this.mseconds = Math.floor((time / 100) % 10);

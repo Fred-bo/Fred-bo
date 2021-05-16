@@ -1,21 +1,27 @@
 <template>
-<div>
-		<topnav></topnav>
-	<div class="dailybox">
-		<div class="title">
-			<span>日用小天地</span>
-		</div>
+  <div>
+    <topnav></topnav>
+    <div class="dailybox">
+      <div class="title">
+        <span>日用小天地</span>
+      </div>
 
-		<div class="list" v-for="el in arr" :key="el.id" v-if="el.type=='02'" @click="choose(el.id)">
-			<img :src="el.img" class="daily-img" />
-			<p v-html="el.desc" class="daily-desc"></p>
-			</router-link>
-			<p class="daily-price">￥{{el.price}}</p>
-			<img :src="hotimg" alt v-if="el.hot==1" class="hotimg" />
-		</div>
-	</div>
-		<myfooter></myfooter>
-</div>
+      <div
+        class="list"
+        v-for="el in arr"
+        :key="el.id"
+        v-if="el.type == '02'"
+        @click="choose(el.id)"
+      >
+        <img :src="el.img" class="daily-img" />
+        <p v-html="el.desc" class="daily-desc"></p>
+
+        <p class="daily-price">￥{{ el.price }}</p>
+        <img :src="hotimg" alt v-if="el.hot == 1" class="hotimg" />
+      </div>
+    </div>
+    <myfooter></myfooter>
+  </div>
 </template>
 
 <script>

@@ -55,7 +55,7 @@
               v-if="activeTitle == '基本资料' || activeTitle == '修改密码'"
               to="/login"
               style="color: #8d70c6; text-decoration: none"
-              @click="backUser"
+              @click.native="backUser"
               >退出登录</router-link
             >
             <router-link
@@ -195,6 +195,7 @@
 </template>
 
 <script>
+ import Cookies from 'js-cookie'
 import HaderNav from "../components/haderNav";
 import formatTime from "../../assets/js/filter";
 import CarTable from "../components/carTable";
@@ -279,8 +280,21 @@ export default {
       this.goodsBl = false;
       this.dateBl = false;
     },
+    clearCookie(){
+      document.cookie=document.cookie.match(/[^ =;]+(?=\=)/g)[0]+'=0;expires=' + new Date( 0).toUTCString()
+      // var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+      // if(arr){
+      //   for(let i=0;i<arr.length;i++){
+      //    document.cookie=arr[i]=0;
+      //   }
+      // }else{}
+    },
     backUser() {
-      localStorage.setItem("email", null);
+      // localStorage.setItem("email", null);
+      localStorage.clear();     
+      // document.cookie=document.cookie.match(/[^ =;]+(?=\=)/g)[0]+'=0;expires=' + new Date( 0).toUTCString()
+      // cookie.setMaxAge(0)
+      clearCookie()
     },
 
     //删除

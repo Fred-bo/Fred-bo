@@ -27,7 +27,6 @@
             placeholder="邮箱账号"
           ></el-input>
         </el-form-item>
-
         <el-form-item prop="pwd">
           <el-input
             type="password"
@@ -36,7 +35,6 @@
             placeholder="密码"
           ></el-input>
         </el-form-item>
-
         <el-form-item>
           <el-button type="primary" @click="login('loginForm')">登录</el-button>
           <el-button type="primary" @click="onRegit('registerForm')"
@@ -115,7 +113,6 @@ export default {
         }
       });
     },
-
     onRegit() {
       this.$router.push("/register");
     },

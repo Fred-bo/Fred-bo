@@ -2,7 +2,7 @@
   <div class="Manage">
     <!-- 头部 -->
     <el-header>
-      <div class="logo-left">
+      <div class="logo-left" ref="divimg" @click="msg">
         <img src="@/img/cloudCity.png" alt="" class="logo" />
         <span>云城便利店后台管理系统</span>
       </div>
@@ -221,11 +221,16 @@ export default {
     this.getUserInfo();
   },
   methods: {
+    msg() {
+      console.log("你好呀");
+    },
     // 获取用户个人信息
     getUserInfo() {
       this.$axios.get("http://127.0.0.1:7001/userp").then((res) => {
         this.userInfo = res.data;
       });
+      // console.log(this.$refs.divimg.msg());
+      console.log(this.$refs.divimg.innerText);
     },
     // 获得所有订单
     order() {
